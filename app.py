@@ -20,6 +20,7 @@ torch.set_num_threads(4)
 MODEL_FILES = {
     "Small CNN": "cnn_seed0.pt",
     "Small CNN + photometric augmentation": "cnn_photometric_seed0.pt",
+    "Small CNN + photometric + inversion augmentation": "cnn_invert_seed0.pt",
     "ResNet-18 (ImageNet, fine-tuned)": "resnet18_seed0.pt",
 }
 LOW_CONFIDENCE = 0.6

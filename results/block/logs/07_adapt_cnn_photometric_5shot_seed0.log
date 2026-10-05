@@ -1,0 +1,6 @@
+epoch  1/6  train loss 0.544 acc 83.0%  40s/epoch  max ~3.4 min left
+epoch  2/6  train loss 0.344 acc 88.1%  42s/epoch  max ~2.7 min left
+epoch  3/6  train loss 0.326 acc 88.6%  44s/epoch  max ~2.1 min left
+epoch  4/6  train loss 0.278 acc 90.7%  47s/epoch  max ~1.4 min left
+epoch  5/6  train loss 0.280 acc 91.3%  47s/epoch  max ~0.7 min left
+epoch  6/6  train loss 0.258 acc 91.8%  47s/epoch  max ~0.0 min left

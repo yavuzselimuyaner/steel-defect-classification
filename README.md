@@ -8,7 +8,8 @@ caused by data leakage, shows *why* a plain MLP fails, measures how little label
 is needed, stress-tests the models under realistic camera degradations, inspects what
 the networks look at with Grad-CAM, and finally evaluates them on **an independent
 dataset from another production line, where accuracy collapses to ~25 %**. The failure
-analysis explains the collapse.
+analysis explains the collapse, and a few-shot adaptation experiment shows how to recover:
+**five labelled images per class from the new line bring it back to 85 %**.
 
 ![Grad-CAM examples](figures/block/05_gradcam_examples.png)
 
@@ -24,6 +25,8 @@ analysis explains the collapse.
 | 6 | The hottest Grad-CAM pixel lies inside an annotated defect box for **71 %** of test images (chance: 38 %). | Step 5 |
 | 7 | On the independent **X-SDD** dataset the models score **23–30 %** on the three matching classes. Scratches fail because their polarity is inverted (bright on dark in NEU, dark on bright in X-SDD): **inverting those images lifts ResNet-18 from 7 % to 99.5 %** on scratches. | Step 6 |
 | 8 | On defect types they have never seen, the models stay **78–90 % confident** on average; a 60 % confidence threshold flags only 7–16 % of them. **Softmax confidence is not a safe out-of-distribution detector.** | Step 6 |
+| 9 | Training with random intensity inversion does **not** fix the transfer (22 % on X-SDD) and costs 3 points on NEU — polarity is not the only difference between the lines. | Step 7 |
+| 10 | **Few-shot adaptation works:** with frozen ImageNet features, **5 labelled X-SDD images per class give 85 %, 25 give 95 %**, while NEU accuracy stays at ~98 %. | Step 7 |
 
 ## Data
 
@@ -129,6 +132,36 @@ acts as the "smooth surface" fallback class — a pattern that reappears on X-SD
 ![X-SDD confusion](figures/block/06_cross_dataset_confusion.png)
 ![Confidence](figures/block/06_confidence.png)
 
+### Step 7 — closing the gap
+
+Two remedies were tried. **(A)** Train the Small CNN with photometric augmentation plus random
+intensity inversion, so that bright-on-dark and dark-on-bright defects look alike. **(B)** Few-shot
+adaptation: add *k* labelled X-SDD images per matching class to the NEU training data (oversampled
+to ~20 % of each epoch), fine-tune for 6 epochs, and test on the remaining X-SDD images. Three
+different random draws of the support images; support images are never tested on.
+
+Mean per-class accuracy on the three matching X-SDD classes (held-out images) and NEU test accuracy:
+
+| Method | k = 0 | k = 5 | k = 10 | k = 25 | NEU at k = 25 |
+|---|---|---|---|---|---|
+| Small CNN, NEU only | 21.3 % | — | — | — | 99.7 % |
+| (A) Small CNN + photometric + inversion aug. | 22.4 % | — | — | — | 96.7 % (k = 0) |
+| (B) fine-tuned Small CNN + photometric + inversion aug. | 22.4 % | 70.8 % | 75.4 % | 79.6 % | 95.2 % |
+| (B) fine-tuned Small CNN + photometric aug. | 24.0 % | 76.0 % | 81.5 % | 87.9 % | 98.7 % |
+| (B) frozen ImageNet ResNet-18 + logistic regression | 20.3 % | **85.2 %** | **88.7 %** | **95.4 %** | 97.9 % |
+
+* **Inversion augmentation alone does not transfer.** Inverting X-SDD scratches at *test* time
+  works for ResNet-18 (Step 6), but teaching the small CNN that both polarities are scratches
+  still leaves X-SDD scratches at 4 %: line width, resolution (128 px upsampled) and background
+  texture also differ. It also costs ~3 points on NEU.
+* **A handful of target-domain labels is far more effective than any augmentation tried.**
+  X-SDD rolled-in scale goes from 0 % to 98.5 % with five images per class (linear probe).
+  Inclusion remains the hardest class (58–88 % across methods).
+* Generic ImageNet features adapt best: with few labels, a linear classifier on frozen
+  features beats fine-tuning a small network trained from scratch.
+
+![Domain adaptation](figures/block/07_domain_adaptation.png)
+
 ## Limitations
 
 * NEU test performance is near ceiling, so differences between strong models on NEU
@@ -141,6 +174,9 @@ acts as the "smooth surface" fallback class — a pattern that reappears on X-SD
   how generously boxes were drawn (pitted surface boxes cover 83 % of the image).
 * A 6-way classifier always outputs one of six classes. Deployment would need an explicit
   "unknown defect" mechanism; softmax confidence alone is not enough (Step 6).
+* Few-shot adaptation was evaluated on three X-SDD classes only; the support images come from
+  the same X-SDD pool as the query images, which is optimistic compared with labelling the
+  first parts of a new production run.
 
 ## Running it
 
@@ -173,6 +209,7 @@ defect/            data loading & splits, models, training loop, Grad-CAM, plott
 04_robustness.py   photometric augmentation + degradation tests
 05_gradcam.py      Grad-CAM, pointing game, failure cases
 06_cross_dataset.py  X-SDD evaluation, confidence analysis
+07_domain_shift.py inversion augmentation, few-shot adaptation to X-SDD
 app.py             Streamlit demo
 results/<split>/   CSV results, logs        figures/<split>/   all figures
 ```

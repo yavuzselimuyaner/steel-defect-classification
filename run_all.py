@@ -13,7 +13,7 @@ import time
 split = sys.argv[1] if len(sys.argv) > 1 else "block"
 steps = ["01_explore.py", "02_baselines.py", "02_plots.py", "02b_leakage_check.py", "03_transfer.py", "03_plots.py"]
 if split == "block":
-    steps += ["04_robustness.py", "05_gradcam.py", "06_cross_dataset.py"]
+    steps += ["04_robustness.py", "05_gradcam.py", "06_cross_dataset.py", "07_domain_shift.py"]
 
 env = {**os.environ, "DEFECT_SPLIT": split, "PYTHONIOENCODING": "utf-8", "PYTHONWARNINGS": "ignore"}
 start = time.time()

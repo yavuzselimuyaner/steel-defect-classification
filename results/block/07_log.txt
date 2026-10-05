@@ -1,0 +1,48 @@
+trained inversion-augmented CNN seed 0
+trained inversion-augmented CNN seed 1
+trained inversion-augmented CNN seed 2
+unadapted models and linear probe evaluated
+done (5, 0, 'cnn_invert'): X-SDD 74.2%, NEU 96.4%
+done (5, 1, 'cnn_invert'): X-SDD 68.6%, NEU 96.7%
+done (5, 2, 'cnn_invert'): X-SDD 69.6%, NEU 95.0%
+done (10, 0, 'cnn_invert'): X-SDD 74.2%, NEU 97.2%
+done (10, 1, 'cnn_invert'): X-SDD 71.8%, NEU 95.6%
+done (10, 2, 'cnn_invert'): X-SDD 80.4%, NEU 96.1%
+done (25, 0, 'cnn_invert'): X-SDD 78.7%, NEU 95.8%
+done (25, 1, 'cnn_invert'): X-SDD 75.4%, NEU 94.7%
+done (25, 2, 'cnn_invert'): X-SDD 84.7%, NEU 95.0%
+done (5, 0, 'cnn_photometric'): X-SDD 80.9%, NEU 97.8%
+done (5, 1, 'cnn_photometric'): X-SDD 73.3%, NEU 98.9%
+done (5, 2, 'cnn_photometric'): X-SDD 74.0%, NEU 98.6%
+done (10, 0, 'cnn_photometric'): X-SDD 81.7%, NEU 98.9%
+done (10, 1, 'cnn_photometric'): X-SDD 77.8%, NEU 100.0%
+done (10, 2, 'cnn_photometric'): X-SDD 85.1%, NEU 99.4%
+done (25, 0, 'cnn_photometric'): X-SDD 86.4%, NEU 98.6%
+done (25, 1, 'cnn_photometric'): X-SDD 87.8%, NEU 98.9%
+done (25, 2, 'cnn_photometric'): X-SDD 89.4%, NEU 98.6%
+
+                                     neu_test_acc  xsdd_balanced  xsdd_inclusion  xsdd_rolled-in_scale  xsdd_scratches
+method                          k                                                                                    
+no adaptation cnn               0          0.997          0.213           0.640                 0.000           0.000
+                                5          0.997          0.213           0.639                 0.000           0.000
+                                10         0.997          0.212           0.635                 0.000           0.000
+                                25         0.997          0.215           0.645                 0.000           0.000
+no adaptation cnn_photometric   0          0.995          0.240           0.720                 0.000           0.000
+                                5          0.995          0.240           0.720                 0.000           0.000
+                                10         0.995          0.238           0.715                 0.000           0.000
+                                25         0.995          0.242           0.726                 0.000           0.000
+no adaptation cnn_invert        0          0.967          0.224           0.630                 0.000           0.042
+                                5          0.967          0.223           0.627                 0.000           0.041
+                                10         0.967          0.224           0.630                 0.000           0.043
+                                25         0.967          0.224           0.637                 0.000           0.034
+linear probe (frozen ResNet-18) 0          0.989          0.203           0.307                 0.005           0.299
+                                5          0.987          0.852           0.614                 0.985           0.959
+                                10         0.988          0.887           0.690                 0.993           0.978
+                                25         0.979          0.954           0.876                 0.996           0.991
+fine-tune cnn_invert            5          0.960          0.708           0.582                 0.842           0.700
+                                10         0.963          0.754           0.580                 0.898           0.785
+                                25         0.952          0.796           0.590                 0.929           0.869
+fine-tune cnn_photometric       5          0.984          0.760           0.671                 0.897           0.713
+                                10         0.994          0.815           0.630                 0.931           0.884
+                                25         0.987          0.879           0.710                 0.966           0.960
+figure written

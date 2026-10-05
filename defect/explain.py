@@ -14,6 +14,7 @@ ARCHITECTURES = {
     # file prefix: (constructor, Grad-CAM target layer)
     "cnn": (SmallCNN, lambda m: m.features[-2]),
     "cnn_photometric": (SmallCNN, lambda m: m.features[-2]),
+    "cnn_invert": (SmallCNN, lambda m: m.features[-2]),
     "resnet18": (lambda: ResNet18Gray(pretrained=False), lambda m: m.net.layer4),
 }
 

@@ -9,39 +9,28 @@ never trained on and are used to check whether low confidence flags them.
     surface scratch                    -> scratches   (dark lines on bright steel in X-SDD,
                                                        bright lines on dark steel in NEU)
 """
-import glob
-import os
-
 import numpy as np
 import pandas as pd
 import torch
-from PIL import Image
 
-from defect.data import CLASS_NAMES, CLASSES, FIGURES, MODELS, RESULTS, ROOT
+from defect.data import CLASS_NAMES, CLASSES, FIGURES, MODELS, RESULTS
 from defect.explain import load_checkpoint
 from defect.plots import INK, INK_2, MUTED, SERIES, SURFACE, plt, save
 from defect.train import load_tensors, normalize, predict_logits
+from defect.xsdd import MAPPING, UNSEEN, load_xsdd
 
 torch.set_num_threads(12)
-XSDD = ROOT / "external" / "X-SDD"
-MAPPING = {"slag inclusion": "inclusion", "oxide scale of temperature system": "rolled-in_scale",
-           "surface scratch": "scratches"}
-UNSEEN = ["red iron", "iron sheet ash", "oxide scale of plate system", "finishing roll printing"]
 SEEDS = (0, 1, 2)
 NETS = {"Small CNN": "cnn", "Small CNN + photometric aug.": "cnn_photometric", "ResNet-18 fine-tuned": "resnet18"}
 LOW_CONFIDENCE = 0.6
 
 # X-SDD images: grayscale, resized from 128x128 to the 200x200 the networks were trained on
-files = sorted(glob.glob(str(XSDD / "*" / "*")))
-xcls = np.array([os.path.basename(os.path.dirname(f)) for f in files])
-X = torch.from_numpy(np.stack([np.asarray(Image.open(f).convert("L").resize((200, 200), Image.BILINEAR))
-                               for f in files])).unsqueeze(1)
+X, xcls, y_mapped, files = load_xsdd()
 xmean, xstd = X.float().mean().item(), X.float().std().item()
 neu, neu_mean, neu_std = load_tensors()
 print(f"X-SDD: {len(files)} images, pixel mean {xmean:.1f} (NEU train: {neu_mean:.1f})")
 
 mapped = np.isin(xcls, list(MAPPING))
-y_mapped = np.array([CLASSES.index(MAPPING[c]) if c in MAPPING else -1 for c in xcls])
 target_idx = [CLASSES.index(c) for c in MAPPING.values()]
 
 rows, pred_tables, conf = [], {}, []

@@ -128,3 +128,15 @@ def photometric(x):
     if torch.rand(1).item() < 0.3:
         x = gaussian_blur(x, 5, torch.empty(1).uniform_(0.3, 1.0).item())
     return x.clamp(0, 255)
+
+
+def photometric_invert(x):
+    """Photometric augmentation plus a random intensity inversion (negative image).
+
+    A defect stays the same defect whether it appears bright on dark or dark on bright
+    steel; NEU only shows one polarity per class, other lines show the other one.
+    """
+    x = photometric(x)
+    inv = torch.rand(len(x)) < 0.5
+    x[inv] = 255 - x[inv]
+    return x
