@@ -1,0 +1,37 @@
+X-SDD: 1360 images, pixel mean 126.1 (NEU train: 127.2)
+Small CNN seed 0: mapped accuracy 25.7%
+Small CNN seed 1: mapped accuracy 25.0%
+Small CNN seed 2: mapped accuracy 28.7%
+Small CNN + photometric aug. seed 0: mapped accuracy 30.6%
+Small CNN + photometric aug. seed 1: mapped accuracy 28.3%
+Small CNN + photometric aug. seed 2: mapped accuracy 30.4%
+ResNet-18 fine-tuned seed 0: mapped accuracy 22.3%
+ResNet-18 fine-tuned seed 1: mapped accuracy 24.7%
+ResNet-18 fine-tuned seed 2: mapped accuracy 20.5%
+
+X-SDD accuracy on the three matching classes (mean over seeds):
+                                                     acc_mapped  acc_mapped_3way  acc_inclusion  acc_rolled-in_scale  acc_scratches
+model                        variant                                                                                               
+Small CNN                    as is                        0.265            0.293          0.640                  0.0          0.000
+                             X-SDD pixel statistics       0.016            0.557          0.017                  0.0          0.040
+                             scratches inverted           0.354            0.382          0.640                  0.0          0.381
+Small CNN + photometric aug. as is                        0.298            0.357          0.720                  0.0          0.000
+                             X-SDD pixel statistics       0.030            0.501          0.052                  0.0          0.037
+                             scratches inverted           0.441            0.499          0.720                  0.0          0.612
+ResNet-18 fine-tuned         as is                        0.225            0.438          0.507                  0.0          0.065
+                             X-SDD pixel statistics       0.071            0.481          0.052                  0.0          0.211
+                             scratches inverted           0.442            0.644          0.507                  0.0          0.995
+
+confidence and share flagged for manual inspection (< 60%):
+                                                         mean_conf  flagged
+model                        group                                         
+Small CNN                    X-SDD, matching classes         0.880    0.083
+                             X-SDD, unseen defect types      0.861    0.105
+                             NEU test (same source)          0.983    0.003
+Small CNN + photometric aug. X-SDD, matching classes         0.809    0.128
+                             X-SDD, unseen defect types      0.775    0.161
+                             NEU test (same source)          0.973    0.006
+ResNet-18 fine-tuned         X-SDD, matching classes         0.911    0.063
+                             X-SDD, unseen defect types      0.900    0.069
+                             NEU test (same source)          0.997    0.001
+figures written

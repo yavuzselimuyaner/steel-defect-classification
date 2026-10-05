@@ -1,0 +1,8 @@
+epoch  1/10  train loss 0.199 acc 93.4%  val loss 0.054 acc 98.3%  149s/epoch  max ~22.3 min left
+epoch  2/10  train loss 0.092 acc 96.8%  val loss 0.310 acc 88.3%  140s/epoch  max ~19.3 min left
+epoch  3/10  train loss 0.057 acc 98.4%  val loss 0.012 acc 99.7%  141s/epoch  max ~16.7 min left
+epoch  4/10  train loss 0.020 acc 99.7%  val loss 0.039 acc 98.6%  140s/epoch  max ~14.2 min left
+epoch  5/10  train loss 0.006 acc 100.0%  val loss 0.016 acc 99.2%  139s/epoch  max ~11.8 min left
+epoch  6/10  train loss 0.013 acc 99.6%  val loss 0.021 acc 98.9%  143s/epoch  max ~9.5 min left
+epoch  7/10  train loss 0.003 acc 99.9%  val loss 0.025 acc 99.2%  143s/epoch  max ~7.1 min left
+early stopping: no val improvement for 4 epochs

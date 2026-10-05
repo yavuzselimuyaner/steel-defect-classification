@@ -1,0 +1,9 @@
+# Datasets are downloaded separately (see README)
+NEU-DET/
+external/
+
+# Trained weights (regenerate with run_all.py)
+models/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,36 @@
+             mean     std
+per_class                
+5          0.9185  0.0080
+10         0.9509  0.0070
+25         0.9741  0.0098
+50         0.9815  0.0032
+all        0.9917     NaN
+done ('finetune', 0): test accuracy 100.0%
+done ('finetune', 1): test accuracy 100.0%
+done ('finetune', 2): test accuracy 100.0%
+done ('fewshot', 5, 0): test accuracy 75.0%
+done ('fewshot', 5, 1): test accuracy 79.7%
+done ('fewshot', 5, 2): test accuracy 81.4%
+done ('fewshot', 10, 0): test accuracy 87.5%
+done ('fewshot', 10, 1): test accuracy 88.9%
+done ('fewshot', 10, 2): test accuracy 89.2%
+done ('fewshot', 25, 0): test accuracy 94.2%
+done ('fewshot', 25, 1): test accuracy 94.7%
+done ('fewshot', 25, 2): test accuracy 90.3%
+done ('fewshot', 50, 0): test accuracy 92.2%
+done ('fewshot', 50, 1): test accuracy 93.3%
+done ('fewshot', 50, 2): test accuracy 95.0%
+
+TEST ACCURACY (mean / std over seeds)
+                                             mean     std  count
+model                           per_class                       
+ResNet-18 linear probe (frozen) 5          0.9185  0.0080      3
+                                10         0.9509  0.0070      3
+                                25         0.9741  0.0098      3
+                                50         0.9815  0.0032      3
+                                all        0.9917     NaN      1
+ResNet-18 fine-tuned            all        1.0000  0.0000      3
+Small CNN (from scratch)        5          0.7870  0.0331      3
+                                10         0.8852  0.0089      3
+                                25         0.9306  0.0242      3
+                                50         0.9352  0.0140      3

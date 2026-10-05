@@ -1,0 +1,15 @@
+done mlp seed 0
+done mlp seed 1
+done mlp seed 2
+done cnn seed 0
+done cnn seed 1
+done cnn seed 2
+
+TEST SET (mean / std over seeds)
+                                    accuracy               macro_f1              
+                                       mean     std count     mean     std count
+model                                                                           
+Brightness + contrast (2 features)   0.6278     NaN     1   0.6305     NaN     1
+Intensity histogram (32 bins)        0.5944     NaN     1   0.6005     NaN     1
+MLP (64x64 pixels)                   0.6444  0.0167     3   0.6416  0.0183     3
+Small CNN                            0.9880  0.0016     3   0.9880  0.0016     3

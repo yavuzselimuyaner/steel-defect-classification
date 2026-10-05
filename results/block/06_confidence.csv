@@ -1,0 +1,10 @@
+model,group,mean_conf,flagged
+Small CNN,"X-SDD, matching classes",0.88,0.083
+Small CNN,"X-SDD, unseen defect types",0.861,0.105
+Small CNN,NEU test (same source),0.983,0.003
+Small CNN + photometric aug.,"X-SDD, matching classes",0.809,0.128
+Small CNN + photometric aug.,"X-SDD, unseen defect types",0.775,0.161
+Small CNN + photometric aug.,NEU test (same source),0.973,0.006
+ResNet-18 fine-tuned,"X-SDD, matching classes",0.911,0.063
+ResNet-18 fine-tuned,"X-SDD, unseen defect types",0.9,0.069
+ResNet-18 fine-tuned,NEU test (same source),0.997,0.001

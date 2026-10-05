@@ -1,0 +1,251 @@
+perturbation,level,model,seed,accuracy
+exposure,0.5,Brightness + contrast (2 features),0,0.22777777777777777
+exposure,0.5,Small CNN,0,0.9388888888888889
+exposure,0.5,Small CNN,1,0.8944444444444445
+exposure,0.5,Small CNN,2,0.9138888888888889
+exposure,0.5,Small CNN + photometric aug.,0,0.9861111111111112
+exposure,0.5,Small CNN + photometric aug.,1,0.9777777777777777
+exposure,0.5,Small CNN + photometric aug.,2,0.9833333333333333
+exposure,0.5,ResNet-18 fine-tuned,0,0.9944444444444445
+exposure,0.5,ResNet-18 fine-tuned,1,0.9916666666666667
+exposure,0.5,ResNet-18 fine-tuned,2,0.9944444444444445
+exposure,0.7,Brightness + contrast (2 features),0,0.4
+exposure,0.7,Small CNN,0,0.9861111111111112
+exposure,0.7,Small CNN,1,0.9805555555555555
+exposure,0.7,Small CNN,2,0.975
+exposure,0.7,Small CNN + photometric aug.,0,0.9972222222222222
+exposure,0.7,Small CNN + photometric aug.,1,0.9916666666666667
+exposure,0.7,Small CNN + photometric aug.,2,0.9888888888888889
+exposure,0.7,ResNet-18 fine-tuned,0,1.0
+exposure,0.7,ResNet-18 fine-tuned,1,1.0
+exposure,0.7,ResNet-18 fine-tuned,2,1.0
+exposure,0.85,Brightness + contrast (2 features),0,0.6305555555555555
+exposure,0.85,Small CNN,0,0.9916666666666667
+exposure,0.85,Small CNN,1,0.9888888888888889
+exposure,0.85,Small CNN,2,0.9972222222222222
+exposure,0.85,Small CNN + photometric aug.,0,1.0
+exposure,0.85,Small CNN + photometric aug.,1,0.9916666666666667
+exposure,0.85,Small CNN + photometric aug.,2,0.9944444444444445
+exposure,0.85,ResNet-18 fine-tuned,0,1.0
+exposure,0.85,ResNet-18 fine-tuned,1,1.0
+exposure,0.85,ResNet-18 fine-tuned,2,1.0
+exposure,1.0,Brightness + contrast (2 features),0,0.6888888888888889
+exposure,1.0,Small CNN,0,0.9944444444444445
+exposure,1.0,Small CNN,1,0.9972222222222222
+exposure,1.0,Small CNN,2,1.0
+exposure,1.0,Small CNN + photometric aug.,0,1.0
+exposure,1.0,Small CNN + photometric aug.,1,0.9944444444444445
+exposure,1.0,Small CNN + photometric aug.,2,0.9916666666666667
+exposure,1.0,ResNet-18 fine-tuned,0,1.0
+exposure,1.0,ResNet-18 fine-tuned,1,1.0
+exposure,1.0,ResNet-18 fine-tuned,2,1.0
+exposure,1.15,Brightness + contrast (2 features),0,0.5805555555555556
+exposure,1.15,Small CNN,0,0.9583333333333334
+exposure,1.15,Small CNN,1,0.975
+exposure,1.15,Small CNN,2,0.9694444444444444
+exposure,1.15,Small CNN + photometric aug.,0,0.9944444444444445
+exposure,1.15,Small CNN + photometric aug.,1,0.9916666666666667
+exposure,1.15,Small CNN + photometric aug.,2,0.9861111111111112
+exposure,1.15,ResNet-18 fine-tuned,0,1.0
+exposure,1.15,ResNet-18 fine-tuned,1,0.9916666666666667
+exposure,1.15,ResNet-18 fine-tuned,2,0.9777777777777777
+exposure,1.3,Brightness + contrast (2 features),0,0.45555555555555555
+exposure,1.3,Small CNN,0,0.8805555555555555
+exposure,1.3,Small CNN,1,0.8944444444444445
+exposure,1.3,Small CNN,2,0.8944444444444445
+exposure,1.3,Small CNN + photometric aug.,0,0.9888888888888889
+exposure,1.3,Small CNN + photometric aug.,1,0.9861111111111112
+exposure,1.3,Small CNN + photometric aug.,2,0.9805555555555555
+exposure,1.3,ResNet-18 fine-tuned,0,0.9638888888888889
+exposure,1.3,ResNet-18 fine-tuned,1,0.9416666666666667
+exposure,1.3,ResNet-18 fine-tuned,2,0.9222222222222223
+exposure,1.5,Brightness + contrast (2 features),0,0.3277777777777778
+exposure,1.5,Small CNN,0,0.7694444444444445
+exposure,1.5,Small CNN,1,0.7527777777777778
+exposure,1.5,Small CNN,2,0.8083333333333333
+exposure,1.5,Small CNN + photometric aug.,0,0.9777777777777777
+exposure,1.5,Small CNN + photometric aug.,1,0.9722222222222222
+exposure,1.5,Small CNN + photometric aug.,2,0.9611111111111111
+exposure,1.5,ResNet-18 fine-tuned,0,0.8666666666666667
+exposure,1.5,ResNet-18 fine-tuned,1,0.8861111111111111
+exposure,1.5,ResNet-18 fine-tuned,2,0.8666666666666667
+contrast,0.4,Brightness + contrast (2 features),0,0.17222222222222222
+contrast,0.4,Small CNN,0,0.2972222222222222
+contrast,0.4,Small CNN,1,0.3472222222222222
+contrast,0.4,Small CNN,2,0.3138888888888889
+contrast,0.4,Small CNN + photometric aug.,0,0.5666666666666667
+contrast,0.4,Small CNN + photometric aug.,1,0.5666666666666667
+contrast,0.4,Small CNN + photometric aug.,2,0.49166666666666664
+contrast,0.4,ResNet-18 fine-tuned,0,0.7472222222222222
+contrast,0.4,ResNet-18 fine-tuned,1,0.525
+contrast,0.4,ResNet-18 fine-tuned,2,0.575
+contrast,0.6,Brightness + contrast (2 features),0,0.225
+contrast,0.6,Small CNN,0,0.5138888888888888
+contrast,0.6,Small CNN,1,0.5722222222222222
+contrast,0.6,Small CNN,2,0.5333333333333333
+contrast,0.6,Small CNN + photometric aug.,0,0.9666666666666667
+contrast,0.6,Small CNN + photometric aug.,1,0.9583333333333334
+contrast,0.6,Small CNN + photometric aug.,2,0.9555555555555556
+contrast,0.6,ResNet-18 fine-tuned,0,0.9944444444444445
+contrast,0.6,ResNet-18 fine-tuned,1,0.9777777777777777
+contrast,0.6,ResNet-18 fine-tuned,2,0.9833333333333333
+contrast,0.8,Brightness + contrast (2 features),0,0.5055555555555555
+contrast,0.8,Small CNN,0,0.9833333333333333
+contrast,0.8,Small CNN,1,0.9805555555555555
+contrast,0.8,Small CNN,2,0.975
+contrast,0.8,Small CNN + photometric aug.,0,0.9944444444444445
+contrast,0.8,Small CNN + photometric aug.,1,0.9888888888888889
+contrast,0.8,Small CNN + photometric aug.,2,0.9888888888888889
+contrast,0.8,ResNet-18 fine-tuned,0,1.0
+contrast,0.8,ResNet-18 fine-tuned,1,1.0
+contrast,0.8,ResNet-18 fine-tuned,2,1.0
+contrast,1.0,Brightness + contrast (2 features),0,0.6888888888888889
+contrast,1.0,Small CNN,0,0.9944444444444445
+contrast,1.0,Small CNN,1,0.9972222222222222
+contrast,1.0,Small CNN,2,1.0
+contrast,1.0,Small CNN + photometric aug.,0,1.0
+contrast,1.0,Small CNN + photometric aug.,1,0.9944444444444445
+contrast,1.0,Small CNN + photometric aug.,2,0.9916666666666667
+contrast,1.0,ResNet-18 fine-tuned,0,1.0
+contrast,1.0,ResNet-18 fine-tuned,1,1.0
+contrast,1.0,ResNet-18 fine-tuned,2,1.0
+contrast,1.25,Brightness + contrast (2 features),0,0.6194444444444445
+contrast,1.25,Small CNN,0,1.0
+contrast,1.25,Small CNN,1,0.975
+contrast,1.25,Small CNN,2,0.9972222222222222
+contrast,1.25,Small CNN + photometric aug.,0,0.9916666666666667
+contrast,1.25,Small CNN + photometric aug.,1,0.9972222222222222
+contrast,1.25,Small CNN + photometric aug.,2,0.9916666666666667
+contrast,1.25,ResNet-18 fine-tuned,0,0.9944444444444445
+contrast,1.25,ResNet-18 fine-tuned,1,1.0
+contrast,1.25,ResNet-18 fine-tuned,2,1.0
+contrast,1.5,Brightness + contrast (2 features),0,0.4722222222222222
+contrast,1.5,Small CNN,0,0.9472222222222222
+contrast,1.5,Small CNN,1,0.9083333333333333
+contrast,1.5,Small CNN,2,0.9111111111111111
+contrast,1.5,Small CNN + photometric aug.,0,0.9583333333333334
+contrast,1.5,Small CNN + photometric aug.,1,0.9694444444444444
+contrast,1.5,Small CNN + photometric aug.,2,0.9638888888888889
+contrast,1.5,ResNet-18 fine-tuned,0,0.9666666666666667
+contrast,1.5,ResNet-18 fine-tuned,1,0.9972222222222222
+contrast,1.5,ResNet-18 fine-tuned,2,0.9972222222222222
+blur,0.0,Brightness + contrast (2 features),0,0.6888888888888889
+blur,0.0,Small CNN,0,0.9944444444444445
+blur,0.0,Small CNN,1,0.9972222222222222
+blur,0.0,Small CNN,2,1.0
+blur,0.0,Small CNN + photometric aug.,0,1.0
+blur,0.0,Small CNN + photometric aug.,1,0.9944444444444445
+blur,0.0,Small CNN + photometric aug.,2,0.9916666666666667
+blur,0.0,ResNet-18 fine-tuned,0,1.0
+blur,0.0,ResNet-18 fine-tuned,1,1.0
+blur,0.0,ResNet-18 fine-tuned,2,1.0
+blur,0.5,Brightness + contrast (2 features),0,0.6416666666666667
+blur,0.5,Small CNN,0,0.7361111111111112
+blur,0.5,Small CNN,1,0.9722222222222222
+blur,0.5,Small CNN,2,0.9694444444444444
+blur,0.5,Small CNN + photometric aug.,0,1.0
+blur,0.5,Small CNN + photometric aug.,1,0.9944444444444445
+blur,0.5,Small CNN + photometric aug.,2,0.9888888888888889
+blur,0.5,ResNet-18 fine-tuned,0,0.9944444444444445
+blur,0.5,ResNet-18 fine-tuned,1,1.0
+blur,0.5,ResNet-18 fine-tuned,2,1.0
+blur,1.0,Brightness + contrast (2 features),0,0.5888888888888889
+blur,1.0,Small CNN,0,0.4083333333333333
+blur,1.0,Small CNN,1,0.43333333333333335
+blur,1.0,Small CNN,2,0.4027777777777778
+blur,1.0,Small CNN + photometric aug.,0,0.8
+blur,1.0,Small CNN + photometric aug.,1,0.6944444444444444
+blur,1.0,Small CNN + photometric aug.,2,0.7833333333333333
+blur,1.0,ResNet-18 fine-tuned,0,0.6861111111111111
+blur,1.0,ResNet-18 fine-tuned,1,0.6444444444444445
+blur,1.0,ResNet-18 fine-tuned,2,0.6416666666666667
+blur,1.5,Brightness + contrast (2 features),0,0.5638888888888889
+blur,1.5,Small CNN,0,0.30833333333333335
+blur,1.5,Small CNN,1,0.325
+blur,1.5,Small CNN,2,0.3111111111111111
+blur,1.5,Small CNN + photometric aug.,0,0.6861111111111111
+blur,1.5,Small CNN + photometric aug.,1,0.5361111111111111
+blur,1.5,Small CNN + photometric aug.,2,0.675
+blur,1.5,ResNet-18 fine-tuned,0,0.5888888888888889
+blur,1.5,ResNet-18 fine-tuned,1,0.5888888888888889
+blur,1.5,ResNet-18 fine-tuned,2,0.5527777777777778
+blur,2.0,Brightness + contrast (2 features),0,0.5472222222222223
+blur,2.0,Small CNN,0,0.28055555555555556
+blur,2.0,Small CNN,1,0.2777777777777778
+blur,2.0,Small CNN,2,0.2777777777777778
+blur,2.0,Small CNN + photometric aug.,0,0.425
+blur,2.0,Small CNN + photometric aug.,1,0.37777777777777777
+blur,2.0,Small CNN + photometric aug.,2,0.49722222222222223
+blur,2.0,ResNet-18 fine-tuned,0,0.55
+blur,2.0,ResNet-18 fine-tuned,1,0.48333333333333334
+blur,2.0,ResNet-18 fine-tuned,2,0.3972222222222222
+blur,3.0,Brightness + contrast (2 features),0,0.5055555555555555
+blur,3.0,Small CNN,0,0.22777777777777777
+blur,3.0,Small CNN,1,0.20277777777777778
+blur,3.0,Small CNN,2,0.21944444444444444
+blur,3.0,Small CNN + photometric aug.,0,0.2972222222222222
+blur,3.0,Small CNN + photometric aug.,1,0.25277777777777777
+blur,3.0,Small CNN + photometric aug.,2,0.31666666666666665
+blur,3.0,ResNet-18 fine-tuned,0,0.35555555555555557
+blur,3.0,ResNet-18 fine-tuned,1,0.3972222222222222
+blur,3.0,ResNet-18 fine-tuned,2,0.30277777777777776
+noise,0.0,Brightness + contrast (2 features),0,0.6888888888888889
+noise,0.0,Small CNN,0,0.9944444444444445
+noise,0.0,Small CNN,1,0.9972222222222222
+noise,0.0,Small CNN,2,1.0
+noise,0.0,Small CNN + photometric aug.,0,1.0
+noise,0.0,Small CNN + photometric aug.,1,0.9944444444444445
+noise,0.0,Small CNN + photometric aug.,2,0.9916666666666667
+noise,0.0,ResNet-18 fine-tuned,0,1.0
+noise,0.0,ResNet-18 fine-tuned,1,1.0
+noise,0.0,ResNet-18 fine-tuned,2,1.0
+noise,5.0,Brightness + contrast (2 features),0,0.6888888888888889
+noise,5.0,Small CNN,0,0.7972222222222223
+noise,5.0,Small CNN,1,0.7777777777777778
+noise,5.0,Small CNN,2,0.8083333333333333
+noise,5.0,Small CNN + photometric aug.,0,0.9888888888888889
+noise,5.0,Small CNN + photometric aug.,1,0.9833333333333333
+noise,5.0,Small CNN + photometric aug.,2,0.9916666666666667
+noise,5.0,ResNet-18 fine-tuned,0,0.9916666666666667
+noise,5.0,ResNet-18 fine-tuned,1,0.9777777777777777
+noise,5.0,ResNet-18 fine-tuned,2,0.975
+noise,10.0,Brightness + contrast (2 features),0,0.6277777777777778
+noise,10.0,Small CNN,0,0.41388888888888886
+noise,10.0,Small CNN,1,0.37222222222222223
+noise,10.0,Small CNN,2,0.3888888888888889
+noise,10.0,Small CNN + photometric aug.,0,0.9361111111111111
+noise,10.0,Small CNN + photometric aug.,1,0.9444444444444444
+noise,10.0,Small CNN + photometric aug.,2,0.975
+noise,10.0,ResNet-18 fine-tuned,0,0.9388888888888889
+noise,10.0,ResNet-18 fine-tuned,1,0.9138888888888889
+noise,10.0,ResNet-18 fine-tuned,2,0.9472222222222222
+noise,15.0,Brightness + contrast (2 features),0,0.5277777777777778
+noise,15.0,Small CNN,0,0.24166666666666667
+noise,15.0,Small CNN,1,0.18055555555555555
+noise,15.0,Small CNN,2,0.3277777777777778
+noise,15.0,Small CNN + photometric aug.,0,0.8416666666666667
+noise,15.0,Small CNN + photometric aug.,1,0.8111111111111111
+noise,15.0,Small CNN + photometric aug.,2,0.9194444444444444
+noise,15.0,ResNet-18 fine-tuned,0,0.7333333333333333
+noise,15.0,ResNet-18 fine-tuned,1,0.5083333333333333
+noise,15.0,ResNet-18 fine-tuned,2,0.8666666666666667
+noise,20.0,Brightness + contrast (2 features),0,0.5194444444444445
+noise,20.0,Small CNN,0,0.16666666666666666
+noise,20.0,Small CNN,1,0.16666666666666666
+noise,20.0,Small CNN,2,0.3111111111111111
+noise,20.0,Small CNN + photometric aug.,0,0.5416666666666666
+noise,20.0,Small CNN + photometric aug.,1,0.5416666666666666
+noise,20.0,Small CNN + photometric aug.,2,0.8361111111111111
+noise,20.0,ResNet-18 fine-tuned,0,0.5694444444444444
+noise,20.0,ResNet-18 fine-tuned,1,0.4111111111111111
+noise,20.0,ResNet-18 fine-tuned,2,0.6138888888888889
+noise,30.0,Brightness + contrast (2 features),0,0.4305555555555556
+noise,30.0,Small CNN,0,0.16666666666666666
+noise,30.0,Small CNN,1,0.16666666666666666
+noise,30.0,Small CNN,2,0.18055555555555555
+noise,30.0,Small CNN + photometric aug.,0,0.20555555555555555
+noise,30.0,Small CNN + photometric aug.,1,0.24722222222222223
+noise,30.0,Small CNN + photometric aug.,2,0.3888888888888889
+noise,30.0,ResNet-18 fine-tuned,0,0.5222222222222223
+noise,30.0,ResNet-18 fine-tuned,1,0.33055555555555555
+noise,30.0,ResNet-18 fine-tuned,2,0.5111111111111111
